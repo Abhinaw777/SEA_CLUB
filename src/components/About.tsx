@@ -278,7 +278,7 @@ const About: React.FC = () => {
                   
                   <div className="relative z-10">
                     <div className={`bg-gradient-to-r ${item.gradient} w-18 h-18 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg`}>
-                      <item.icon className="h-9 w-9 text-white" />
+                      <item.icon className="h-9 w-9 text-white group-hover:scale-105 transition-transform duration-300" />
                     </div>
                     <h4 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover:text-blue-600 transition-colors duration-300">
                       {item.title}
@@ -289,7 +289,7 @@ const About: React.FC = () => {
                     
                     {/* Interactive Button */}
                     <div className="text-center">
-                      <button className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+                      <button className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                       </button>

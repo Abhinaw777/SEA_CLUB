@@ -130,23 +130,23 @@ const Events: React.FC = () => {
 
           {/* Event Content */}
           <div className="p-6 sm:p-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300 text-center">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 text-center tracking-tight">
               {eventData.title}
             </h3>
-            <p className="text-gray-600 mb-4 text-center leading-relaxed">
+            <p className="text-gray-700 mb-6 text-center leading-relaxed text-lg sm:text-xl font-medium max-w-2xl mx-auto">
               {eventData.description}
             </p>
 
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-base text-gray-600 justify-center">
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center text-base sm:text-lg text-gray-700 justify-center font-medium">
                 <Calendar className="h-5 w-5 mr-3 text-blue-500" />
                 <span>{formatDate(eventData.date)}</span>
               </div>
-              <div className="flex items-center text-base text-gray-600 justify-center">
+              <div className="flex items-center text-base sm:text-lg text-gray-700 justify-center font-medium">
                 <Clock className="h-5 w-5 mr-3 text-blue-500" />
                 <span>{eventData.time} - 01:00 PM</span>
               </div>
-              <div className="flex items-center text-base text-gray-600 justify-center">
+              <div className="flex items-center text-base sm:text-lg text-gray-700 justify-center font-medium">
                 <MapPin className="h-5 w-5 mr-3 text-blue-500" />
                 <span>{eventData.location}</span>
               </div>
