@@ -265,7 +265,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {whatWeDo.map((item, index) => (
               <div key={index} className="what-we-do-card group" style={{ animationDelay: item.delay }}>
-                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-6 hover:rotate-1 overflow-hidden h-full">
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 overflow-hidden h-full">
                   {/* Animated Background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-all duration-500`}></div>
                   
@@ -277,7 +277,7 @@ const About: React.FC = () => {
                   </div>
                   
                   <div className="relative z-10">
-                    <div className={`bg-gradient-to-r ${item.gradient} w-18 h-18 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 shadow-lg`}>
+                    <div className={`bg-gradient-to-r ${item.gradient} w-18 h-18 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg`}>
                       <item.icon className="h-9 w-9 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover:text-blue-600 transition-colors duration-300">
@@ -289,7 +289,7 @@ const About: React.FC = () => {
                     
                     {/* Interactive Button */}
                     <div className="text-center">
-                      <button className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 group-hover:scale-105">
+                      <button className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105">
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                       </button>
