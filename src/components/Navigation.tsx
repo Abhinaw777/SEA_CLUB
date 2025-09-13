@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Calendar, Users, Image, Mail, Info } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ThemeToggle';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,10 +72,12 @@ const Navigation: React.FC = () => {
               })}
             </div>
             <ThemeToggle />
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button & theme toggle */}
           <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}

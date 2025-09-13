@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ThemeProvider } from './contexts/ThemeContext';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -29,20 +28,18 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <div className="font-inter bg-white dark:bg-gray-900 transition-colors duration-300">
-        <Navigation />
-        <main>
-          <Hero />
-          <About />
-          <Activities />
-          <Events />
-          {/* <Gallery /> */}
-          {/* <Contact /> */}
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="font-inter">
+      <Navigation />
+      <main>
+        <Hero />
+        <About />
+        <Activities />
+        <Events />
+        {/* <Gallery /> */}
+        {/* <Contact /> */}
+      </main>
+      <Footer />
+    </div>
   );
 }
 
