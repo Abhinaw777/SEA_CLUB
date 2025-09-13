@@ -99,22 +99,22 @@ const Events: React.FC = () => {
   }
 
   return (
-    <section id="events" className="py-20 bg-white">
+    <section id="events" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            <span className="text-blue-600">Upcoming</span> Event
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
+            <span className="text-blue-600 dark:text-blue-400">Upcoming</span> Event
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 transition-colors duration-300">
             Join us for our next big event!
           </p>
         </div>
 
         {/* Event Card */}
-        <div className="event-card bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden group">
+        <div className="event-card bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg hover:shadow-2xl dark:shadow-gray-900/50 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden group">
           {/* Event Image */}
-          <div className="relative h-auto overflow-hidden bg-gray-100">
+          <div className="relative h-auto overflow-hidden bg-gray-100 dark:bg-gray-600">
             <img
               src={eventData.image_url}
               alt={eventData.title}
@@ -130,58 +130,58 @@ const Events: React.FC = () => {
 
           {/* Event Content */}
           <div className="p-6 sm:p-8">
-            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300 text-center tracking-tight">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 text-center tracking-tight">
               {eventData.title}
             </h3>
-            <p className="text-gray-700 mb-6 text-center leading-relaxed text-lg sm:text-xl font-medium max-w-2xl mx-auto">
+            <p className="text-gray-700 dark:text-gray-300 mb-6 text-center leading-relaxed text-lg sm:text-xl font-medium max-w-2xl mx-auto transition-colors duration-300">
               {eventData.description}
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="flex items-center text-base sm:text-lg text-gray-700 justify-center font-medium">
-                <Calendar className="h-5 w-5 mr-3 text-blue-500" />
+              <div className="flex items-center text-base sm:text-lg text-gray-700 dark:text-gray-300 justify-center font-medium transition-colors duration-300">
+                <Calendar className="h-5 w-5 mr-3 text-blue-500 dark:text-blue-400" />
                 <span>{formatDate(eventData.date)}</span>
               </div>
-              <div className="flex items-center text-base sm:text-lg text-gray-700 justify-center font-medium">
-                <Clock className="h-5 w-5 mr-3 text-blue-500" />
+              <div className="flex items-center text-base sm:text-lg text-gray-700 dark:text-gray-300 justify-center font-medium transition-colors duration-300">
+                <Clock className="h-5 w-5 mr-3 text-blue-500 dark:text-blue-400" />
                 <span>{eventData.time} - 01:00 PM</span>
               </div>
-              <div className="flex items-center text-base sm:text-lg text-gray-700 justify-center font-medium">
-                <MapPin className="h-5 w-5 mr-3 text-blue-500" />
+              <div className="flex items-center text-base sm:text-lg text-gray-700 dark:text-gray-300 justify-center font-medium transition-colors duration-300">
+                <MapPin className="h-5 w-5 mr-3 text-blue-500 dark:text-blue-400" />
                 <span>{eventData.location}</span>
               </div>
             </div>
 
             {/* Timer or Status */}
             {eventStatus === 'ongoing' ? (
-              <div className="text-center font-bold text-lg text-green-600 py-3 rounded-lg bg-green-50 shadow-inner">
+              <div className="text-center font-bold text-lg text-green-600 dark:text-green-400 py-3 rounded-lg bg-green-50 dark:bg-green-900/30 shadow-inner transition-colors duration-300">
                 Event is LIVE!
               </div>
             ) : (
               timeLeft && (
-                <div className="text-center bg-gradient-to-r from-blue-100 to-indigo-100 py-4 rounded-lg shadow-inner">
-                  <h4 className="text-sm text-gray-600 mb-2">
+                <div className="text-center bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 py-4 rounded-lg shadow-inner transition-colors duration-300">
+                  <h4 className="text-sm text-gray-600 dark:text-gray-400 mb-2 transition-colors duration-300">
                     Time until event:
                   </h4>
-                  <div className="flex justify-center items-center space-x-4 text-blue-600 font-extrabold text-2xl sm:text-3xl">
+                  <div className="flex justify-center items-center space-x-4 text-blue-600 dark:text-blue-400 font-extrabold text-2xl sm:text-3xl transition-colors duration-300">
                     <div className="text-center">
                       <div className="countdown-number">{timeLeft.days}</div>
-                      <div className="text-xs font-normal">Days</div>
+                      <div className="text-xs font-normal text-gray-500 dark:text-gray-400">Days</div>
                     </div>
                     <span>:</span>
                     <div className="text-center">
                       <div className="countdown-number">{timeLeft.hours}</div>
-                      <div className="text-xs font-normal">Hours</div>
+                      <div className="text-xs font-normal text-gray-500 dark:text-gray-400">Hours</div>
                     </div>
                     <span>:</span>
                     <div className="text-center">
                       <div className="countdown-number">{timeLeft.minutes}</div>
-                      <div className="text-xs font-normal">Minutes</div>
+                      <div className="text-xs font-normal text-gray-500 dark:text-gray-400">Minutes</div>
                     </div>
                     <span>:</span>
                     <div className="text-center">
                       <div className="countdown-number">{timeLeft.seconds}</div>
-                      <div className="text-xs font-normal">Seconds</div>
+                      <div className="text-xs font-normal text-gray-500 dark:text-gray-400">Seconds</div>
                     </div>
                   </div>
                 </div>

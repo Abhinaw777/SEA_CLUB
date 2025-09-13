@@ -181,14 +181,14 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="relative py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section id="about" ref={sectionRef} className="relative py-20 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden transition-colors duration-300">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="floating-bg-element absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 blur-xl"></div>
-        <div className="floating-bg-element absolute top-40 right-20 w-24 h-24 bg-purple-100 rounded-full opacity-30 blur-lg"></div>
-        <div className="floating-bg-element absolute bottom-40 left-20 w-40 h-40 bg-indigo-100 rounded-full opacity-25 blur-2xl"></div>
-        <div className="parallax-shape absolute top-60 right-10 w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg opacity-10 rotate-45"></div>
-        <div className="parallax-shape absolute bottom-60 left-40 w-20 h-20 bg-gradient-to-r from-green-400 to-blue-400 rounded-full opacity-15"></div>
+        <div className="floating-bg-element absolute top-20 left-10 w-32 h-32 bg-blue-100 dark:bg-blue-900/30 rounded-full opacity-20 blur-xl transition-colors duration-300"></div>
+        <div className="floating-bg-element absolute top-40 right-20 w-24 h-24 bg-purple-100 dark:bg-purple-900/30 rounded-full opacity-30 blur-lg transition-colors duration-300"></div>
+        <div className="floating-bg-element absolute bottom-40 left-20 w-40 h-40 bg-indigo-100 dark:bg-indigo-900/30 rounded-full opacity-25 blur-2xl transition-colors duration-300"></div>
+        <div className="parallax-shape absolute top-60 right-10 w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400 dark:from-blue-500 dark:to-purple-500 rounded-lg opacity-10 rotate-45 transition-colors duration-300"></div>
+        <div className="parallax-shape absolute bottom-60 left-40 w-20 h-20 bg-gradient-to-r from-green-400 to-blue-400 dark:from-green-500 dark:to-blue-500 rounded-full opacity-15 transition-colors duration-300"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,19 +196,19 @@ const About: React.FC = () => {
         <div ref={headerRef} className="text-center mb-20">
           <div className="about-header">
             <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold tracking-wide uppercase">
+              <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-full text-sm font-semibold tracking-wide uppercase transition-colors duration-300">
                 About Us
               </span>
             </div>
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              About <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">SEAC</span>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-8 leading-tight transition-colors duration-300">
+              About <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent">SEAC</span>
             </h2>
             <div className="max-w-4xl mx-auto">
-              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-6">
+              <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed mb-6 transition-colors duration-300">
                 The Satellite & Electronics Amateur Club is a vibrant community of students and professionals 
                 passionate about space technology, electronics, and amateur radio.
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full"></div>
             </div>
           </div>
         </div>
@@ -218,10 +218,10 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {missionVision.map((item, index) => (
               <div key={index} className="mission-vision-card group">
-                <div className={`relative bg-gradient-to-br ${item.bgGradient} rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 overflow-hidden`}>
+                <div className={`relative bg-gradient-to-br ${item.bgGradient} dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl dark:shadow-gray-900/50 transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 overflow-hidden`}>
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-5">
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white dark:via-gray-600 to-transparent transition-colors duration-300"></div>
                   </div>
                   
                   {/* Glowing Effect */}
@@ -231,16 +231,16 @@ const About: React.FC = () => {
                     <div className={`bg-gradient-to-r ${item.gradient} w-20 h-20 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
                       <item.icon className="h-10 w-10 text-white" />
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-500">
+                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 dark:group-hover:from-blue-400 dark:group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-500">
                       {item.title}
                     </h3>
-                    <p className="text-gray-700 text-center leading-relaxed text-lg">
+                    <p className="text-gray-700 dark:text-gray-300 text-center leading-relaxed text-lg transition-colors duration-300">
                       {item.description}
                     </p>
                     
                     {/* Animated Arrow */}
                     <div className="flex justify-center mt-6">
-                      <ArrowRight className="h-6 w-6 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-2 transition-all duration-300" />
+                      <ArrowRight className="h-6 w-6 text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-2 transition-all duration-300" />
                     </div>
                   </div>
                 </div>
@@ -253,10 +253,10 @@ const About: React.FC = () => {
         <div ref={whatWeDoRef} className="mb-24">
           <div className="text-center mb-16">
             <div className="what-we-do-header">
-              <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                What We <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Do</span>
+              <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
+                What We <span className="bg-gradient-to-r from-emerald-600 to-blue-600 dark:from-emerald-400 dark:to-blue-400 bg-clip-text text-transparent">Do</span>
               </h3>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed transition-colors duration-300">
                 Our activities are designed to provide hands-on experience and foster a deep understanding of technology.
               </p>
             </div>
@@ -265,31 +265,31 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {whatWeDo.map((item, index) => (
               <div key={index} className="what-we-do-card group" style={{ animationDelay: item.delay }}>
-                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 overflow-hidden h-full">
+                <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl dark:shadow-gray-900/50 transition-all duration-500 transform hover:-translate-y-4 overflow-hidden h-full">
                   {/* Animated Background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-all duration-500`}></div>
                   
                   {/* Floating Particles Effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-                    <div className="absolute bottom-8 left-6 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
-                    <div className="absolute top-1/2 right-8 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 dark:bg-blue-300 rounded-full animate-ping"></div>
+                    <div className="absolute bottom-8 left-6 w-1 h-1 bg-purple-400 dark:bg-purple-300 rounded-full animate-pulse"></div>
+                    <div className="absolute top-1/2 right-8 w-1.5 h-1.5 bg-green-400 dark:bg-green-300 rounded-full animate-bounce"></div>
                   </div>
                   
                   <div className="relative z-10">
                     <div className={`bg-gradient-to-r ${item.gradient} w-18 h-18 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg`}>
                       <item.icon className="h-9 w-9 text-white group-hover:scale-105 transition-transform duration-300" />
                     </div>
-                    <h4 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover:text-blue-600 transition-colors duration-300">
+                    <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {item.title}
                     </h4>
-                    <p className="text-gray-600 text-center leading-relaxed mb-6">
+                    <p className="text-gray-600 dark:text-gray-300 text-center leading-relaxed mb-6 transition-colors duration-300">
                       {item.description}
                     </p>
                     
                     {/* Interactive Button */}
                     <div className="text-center">
-                      <button className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
+                      <button className="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transition-all duration-300">
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                       </button>
@@ -303,22 +303,22 @@ const About: React.FC = () => {
 
         {/* Core Values Section */}
         <div ref={coreValuesRef}>
-          <div className="core-values-container relative bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-3xl p-8 md:p-16 shadow-2xl overflow-hidden">
+          <div className="core-values-container relative bg-gradient-to-br from-white via-blue-50 to-indigo-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 rounded-3xl p-8 md:p-16 shadow-2xl dark:shadow-gray-900/50 overflow-hidden transition-colors duration-300">
             {/* Animated Background Pattern */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-400 via-transparent to-purple-400 animate-pulse"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-400 via-transparent to-purple-400 dark:from-blue-500 dark:to-purple-500 animate-pulse transition-colors duration-300"></div>
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute top-8 right-8 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-20 blur-2xl"></div>
-            <div className="absolute bottom-8 left-8 w-24 h-24 bg-gradient-to-br from-indigo-200 to-pink-200 rounded-full opacity-30 blur-xl"></div>
+            <div className="absolute top-8 right-8 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 dark:from-blue-800 dark:to-purple-800 rounded-full opacity-20 blur-2xl transition-colors duration-300"></div>
+            <div className="absolute bottom-8 left-8 w-24 h-24 bg-gradient-to-br from-indigo-200 to-pink-200 dark:from-indigo-800 dark:to-pink-800 rounded-full opacity-30 blur-xl transition-colors duration-300"></div>
             
             <div className="relative z-10">
               <div className="text-center mb-16">
-                <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                  Our Core <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Values</span>
+                <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
+                  Our Core <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">Values</span>
                 </h3>
-                <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+                <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full"></div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -326,22 +326,22 @@ const About: React.FC = () => {
                   <div key={index} className="core-value-item group text-center">
                     <div className="relative">
                       {/* Animated Ring */}
-                      <div className="absolute inset-0 w-20 h-20 mx-auto rounded-full border-4 border-transparent group-hover:border-blue-300 group-hover:scale-125 transition-all duration-500"></div>
+                      <div className="absolute inset-0 w-20 h-20 mx-auto rounded-full border-4 border-transparent group-hover:border-blue-300 dark:group-hover:border-blue-400 group-hover:scale-125 transition-all duration-500"></div>
                       
-                      <div className={`${value.bgColor} w-20 h-20 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                      <div className={`${value.bgColor} dark:bg-gray-700 w-20 h-20 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
                         <value.icon className={`h-9 w-9 ${value.color} group-hover:scale-110 transition-transform duration-300`} />
                       </div>
                     </div>
                     
-                    <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {value.title}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                       {value.description}
                     </p>
                     
                     {/* Hover Effect Line */}
-                    <div className="w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 group-hover:w-16 transition-all duration-500"></div>
+                    <div className="w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 mx-auto mt-4 group-hover:w-16 transition-all duration-500"></div>
                   </div>
                 ))}
               </div>

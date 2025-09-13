@@ -36,16 +36,16 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 dark:bg-black text-gray-300 dark:text-gray-400 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           
           {/* Left side - Logo & Address */}
           <div className="lg:col-span-1">
-            <h2 className="text-2xl font-bold text-white mb-4">SEAC</h2>
+            <h2 className="text-2xl font-bold text-white dark:text-gray-100 mb-4 transition-colors duration-300">SEAC</h2>
             <div className="flex items-start space-x-2">
-              <MapPin className="h-5 w-5 text-gray-400 mt-1" />
-              <p className="text-gray-400">Electronics Building, Room 301</p>
+              <MapPin className="h-5 w-5 text-gray-400 dark:text-gray-500 mt-1 transition-colors duration-300" />
+              <p className="text-gray-400 dark:text-gray-500 transition-colors duration-300">Electronics Building, Room 301</p>
             </div>
           </div>
 
@@ -54,13 +54,13 @@ export default function Footer() {
             
             {/* Club */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Club</h3>
+              <h3 className="text-lg font-semibold text-white dark:text-gray-200 mb-6 transition-colors duration-300">Club</h3>
               <ul className="space-y-3">
                 {footerLinks.club.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="hover:text-white transition-colors duration-200"
+                      className="hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -71,13 +71,13 @@ export default function Footer() {
 
             {/* Activities */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Activities</h3>
+              <h3 className="text-lg font-semibold text-white dark:text-gray-200 mb-6 transition-colors duration-300">Activities</h3>
               <ul className="space-y-3">
                 {footerLinks.activities.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="hover:text-white transition-colors duration-200"
+                      className="hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -88,13 +88,13 @@ export default function Footer() {
 
             {/* Resources */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Resources</h3>
+              <h3 className="text-lg font-semibold text-white dark:text-gray-200 mb-6 transition-colors duration-300">Resources</h3>
               <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="hover:text-white transition-colors duration-200"
+                      className="hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -105,13 +105,13 @@ export default function Footer() {
 
             {/* Connect */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Connect</h3>
+              <h3 className="text-lg font-semibold text-white dark:text-gray-200 mb-6 transition-colors duration-300">Connect</h3>
               <ul className="space-y-3 mb-6">
                 {footerLinks.connect.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="hover:text-white transition-colors duration-200"
+                      className="hover:text-white dark:hover:text-gray-200 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -138,7 +138,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+        <div className="mt-12 pt-8 border-t border-gray-800 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-600 transition-colors duration-300">
           <p>© {new Date().getFullYear()} SEAC. All rights reserved.</p>
         </div>
       </div>
