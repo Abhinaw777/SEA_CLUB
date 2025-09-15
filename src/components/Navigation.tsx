@@ -71,12 +71,10 @@ const Navigation: React.FC = () => {
               })}
             </div>
             <ThemeToggle />
-            <ThemeToggle />
           </div>
 
           {/* Mobile menu button & theme toggle */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
