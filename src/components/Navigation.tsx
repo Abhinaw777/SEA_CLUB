@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Calendar, Users, Image, Mail, Info } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
-import ThemeToggle from './ThemeToggle';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
