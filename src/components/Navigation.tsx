@@ -51,7 +51,7 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-6 flex items-baseline space-x-4">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -70,12 +70,16 @@ const Navigation: React.FC = () => {
                 );
               })}
             </div>
-            <ThemeToggle />
+            <div className="ml-4">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile menu button & theme toggle */}
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+          <div className="md:hidden flex items-center space-x-4">
+            <div className="scale-75">
+              <ThemeToggle />
+            </div>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"

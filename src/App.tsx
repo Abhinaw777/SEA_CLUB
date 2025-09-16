@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Activities from './components/Activities';
 import Events from './components/Events';
+import ScrollImageSection from './components/ScrollImageSection';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -35,6 +36,7 @@ function App() {
         <main>
           <Hero />
           <About />
+          <ScrollImageSection />
           <Activities />
           <Events />
           {/* <Gallery /> */}
